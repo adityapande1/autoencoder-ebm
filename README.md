@@ -53,7 +53,7 @@ $$
 \mathbf{x}^{k+1}\leftarrow \mathbf{x}^k+\frac{\epsilon^2}{2} \nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k) + \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
 $$
 
-For small enough $ \epsilon$ and sufficiently large $K$ the algorithm indeed produces results from the original data distribution. Note that the initialization $\mathbf{x}^{0}$ is done randomly.
+For small enough $\epsilon$ and sufficiently large $K$ the algorithm indeed produces results from the original data distribution. Note that the initialization $\mathbf{x}^{0}$ is done randomly.
 MCMC not only provides a way to train the model also to infer i.e, to sample examples from it once the model is trained.
 
 ## Setup and Scripts
