@@ -83,7 +83,7 @@ python infer.py --num_images 10
 5. `infer.py` file contains the python code to do model inference.
 6. `MCMC.png` file contains the Langevin MCMC used. Please note that this is adopted from Standford CS:236 course.
 
-### NOTE : The data will be downloaded automatically once the train.ipynb is run and a directory `data` will be formed were all the features will be stored
+  #### NOTE : The data will be downloaded automatically once the `train.ipynb` is run and a directory `data` will be formed were all the features will be stored
 
 
 
