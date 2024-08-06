@@ -75,9 +75,6 @@ python train.py --auto_hidden_dim 1024 --encoded_dim 4 --auto_num_epochs 30 --au
 python infer.py --num_images 10
 ```
 
-## Model Interface
-The Gradio link for model inference can be found [here](URL)
-
 ## File Desciption
 1. `train.ipynb` file contains a jupyter notebook to train the model from scratch.
 2. `inference.ipynb` file contains a jupyter notebook to load the trained model and perform inference
