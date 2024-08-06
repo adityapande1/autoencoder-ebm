@@ -44,7 +44,7 @@ def convert_data_to_01(dataset, threshold, kind):
     print(f"The binary data is stored at ::: {folder_path}")
 
 
-def plot_digits(X, Y=None, n = 25):
+def plot_digits(X, Y=None, n = 25, random=True):
     """
     Plots n random digits along with their labels
 
@@ -57,7 +57,8 @@ def plot_digits(X, Y=None, n = 25):
     total_samples = X.shape[0]  
     random_indices = torch.randint(0, total_samples, (n,))     # random n samples
     
-    X = X[random_indices]
+    if random:
+        X = X[random_indices]
     
     if Y is not None:
         Y = Y[random_indices]

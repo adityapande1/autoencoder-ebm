@@ -69,7 +69,7 @@ def langevin_MCMC(f_theta, input_dim, num_steps, eps, batch_size, interval_sampl
         df_dx = grad_wrt_x(model=f_theta, X=X)          # Calculate grad of f_theta(x) wrt theta, 
         X =  X + eps*df_dx + np.sqrt(2*eps)*Z           # x_new = x_old + eps*df_dx + sqrt(2*eps)*z
         
-        if interval_samples and (t%100)==0:
+        if interval_samples and (t%5)==0:
             X_samples.append(X.clone())
     
     if interval_samples:
