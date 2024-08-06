@@ -55,6 +55,16 @@ class EnergyNet(nn.Module):
             
         return generated_data
 
+    def generate_sampled_images(self, autoencoder, device, num_images=10):
+
+        x_sample = langevin_MCMC(f_theta=self, input_dim=autoencoder.encoded_dim,  
+                                batch_size=num_images, num_steps=10000, eps=.001)
+
+        generated_data = autoencoder.decoder.predict(x_sample.to(device))
+        generated_data = generated_data.detach().to('cpu')
+        generated_data = generated_data.reshape(-1,28,28)
+            
+        return generated_data
 
 
 

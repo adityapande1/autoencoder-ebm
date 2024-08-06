@@ -44,7 +44,7 @@ def grad_wrt_x(model, X):
     return X_params.grad.to('cpu')            # Return gradients
 
 
-def langevin_MCMC(f_theta, input_dim, num_steps, eps, batch_size):
+def langevin_MCMC(f_theta, input_dim, num_steps, eps, batch_size, interval_samples=False):
     """
     Generates a batch of samples to be used for training (Contrastive Divergence) of energy based method 
     
@@ -61,13 +61,20 @@ def langevin_MCMC(f_theta, input_dim, num_steps, eps, batch_size):
     
     # Intialise X_not (initial samples)
     X = torch.randn((batch_size, input_dim))
+    X_samples = []
     
     for t in range(num_steps):
         
         Z = torch.randn((batch_size, input_dim))        # Gausssian noise
         df_dx = grad_wrt_x(model=f_theta, X=X)          # Calculate grad of f_theta(x) wrt theta, 
         X =  X + eps*df_dx + np.sqrt(2*eps)*Z           # x_new = x_old + eps*df_dx + sqrt(2*eps)*z
+        
+        if interval_samples and (t%100)==0:
+            X_samples.append(X.clone())
     
+    if interval_samples:
+        return X, X_samples
+
     return X
 
 
