@@ -52,6 +52,9 @@ This stochastically estimates the second term in the R.H.S of the equation. But 
 $$
 \nabla_{\theta} \log Z_{\theta} \simeq - \nabla_{\theta} E_{\theta} (\tilde{\mathbf{x}}),
 $$
+$$
+\mathbf{x}^{k+1} \leftarrow \mathbf{x}^k + \frac{\epsilon^2}{2} \underbrace{\nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k)}_{= -\nabla_{\mathbf{x}} E_{\theta}(\mathbf{x})} + \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
+$$
 
 
 
