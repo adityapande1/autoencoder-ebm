@@ -4,14 +4,14 @@ The project aims at training and generating MNIST images, using the Energy Based
 ## About the project
 Energy based methods have recently been developed as a framwork for generative ML. The project aims at developing the basic workings of energy based methods. For this the task of generating MNIST images is chosen. However, due to computational as well as algorithmic constraints, various methods and techniques are applied to get this task done. Below is a short discussion on the underlying theoritic basics of the project, but before that :
 _____________
-# SOME COOL EXAMPLES
+## Some Cool Examples
 ### Example 1: Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/two.gif)
 
 ### Example 2 : Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/four.gif)
 
-# IDEAS and IMPLEMENTATION
+## Ideas and Implementations
 Energy Based Models (EBMs) are also called non-normalised probability models. In its most general form, the probablity density function is given as:
 
 $$
