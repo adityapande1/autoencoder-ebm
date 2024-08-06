@@ -50,10 +50,7 @@ $$
 This stochastically estimates the second term in the R.H.S of the equation. But the fact still remains that a proper way is needed to get $\tilde{\mathbf{x}}$ which is a sample from the model itself. Here we use Markov chain Monte Carlo (MCMC)techniques to get the data point. More specifically a very famous algorithm used here is Langevin MCMC. The algorithm goes as follows :
 
 $$
-\mathbf{x}^{k+1}\leftarrow \mathbf{x}^k+\frac{\epsilon^2}{2} \underbrace{\nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k)}_{=-\nabla_{x} E_{\theta}(x)}+ \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
-$$
-$$
-\mathbf{x}^{k+1} \leftarrow \mathbf{x}^k + \frac{\epsilon^2}{2} \underbrace{\nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k)}_{=-\nabla_{x} E_{\theta}(x)} + \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
+\mathbf{x}^{k+1}\leftarrow \mathbf{x}^k+\frac{\epsilon^2}{2} \nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k) + \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
 $$
 
 For small enough $ \epsilon$ and sufficiently large $K$ the algorithm indeed produces results from the original data distribution. Note that the initialization $\mathbf{x}^{0}$ is done randomly.
