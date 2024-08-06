@@ -3,14 +3,12 @@ The project aims at training and generating MNIST images, using the Energy Based
 
 ## About the project
 Energy based methods have recently been developed as a framwork for generative ML. The project aims at developing the basic workings of energy based methods. For this the task of generating MNIST images is chosen. However, due to computational as well as algorithmic constraints, various methods and techniques are applied to get this task done. Below is a short discussion on the underlying theoritic basics of the project, but before that :
-
-__________________
+_____________
 # SOME COOL EXAMPLES
-## Example 1
+## Example : Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/two.gif)
 
-## Example 2
-____________________________________
+## Example 2 : Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/four.gif)
 
 # IDEAS and IMPLEMENTATION
@@ -83,11 +81,12 @@ The Gradio link for model inference can be found [here](URL)
 ## File Desciption
 1. `train.ipynb` file contains a jupyter notebook to train the model from scratch.
 2. `inference.ipynb` file contains a jupyter notebook to load the trained model and perform inference
-3. `train.py` file contains the python code to train model from scratch.
-4. `infer.py` file contains the python code to do model inference.
-5. `MCMC.png` file contains the Langevin MCMC used. Please note that this is adopted from Standford CS:236 course.
+3. `visualize.ipynb` file contains a jupyter notebook to visualize the sequential image generation process of the model
+4. `train.py` file contains the python code to train model from scratch.
+5. `infer.py` file contains the python code to do model inference.
+6. `MCMC.png` file contains the Langevin MCMC used. Please note that this is adopted from Standford CS:236 course.
 
-
+### NOTE : The data will be downloaded automatically once the train.ipynb is run and a directory `data` will be formed were all the features will be stored
 
 
 
