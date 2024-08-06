@@ -1,4 +1,4 @@
-# MNIST-EBM
+# AUTOENCODER-EBM MNIST GENERATOR
 The project aims at training and generating MNIST images, using the Energy Based Methods (EBM) framework
 
 ## About the project
