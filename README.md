@@ -5,10 +5,10 @@ The project aims at training and generating MNIST images, using the Energy Based
 Energy based methods have recently been developed as a framwork for generative ML. The project aims at developing the basic workings of energy based methods. For this the task of generating MNIST images is chosen. However, due to computational as well as algorithmic constraints, various methods and techniques are applied to get this task done. Below is a short discussion on the underlying theoritic basics of the project, but before that :
 _____________
 # SOME COOL EXAMPLES
-## Example : Sequential Generation of images by model
+### Example : Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/two.gif)
 
-## Example 2 : Sequential Generation of images by model
+### Example 2 : Sequential Generation of images by model
 ![Cool Demo](https://github.com/adityapande1/autoencoder-ebm/blob/main/media/gifs/four.gif)
 
 # IDEAS and IMPLEMENTATION
@@ -83,7 +83,7 @@ python infer.py --num_images 10
 5. `infer.py` file contains the python code to do model inference.
 6. `MCMC.png` file contains the Langevin MCMC used. Please note that this is adopted from Standford CS:236 course.
 
-  #### NOTE : The data will be downloaded automatically once the `train.ipynb` is run and a directory `data` will be formed were all the features will be stored
+  #### NOTE : The data will be downloaded automatically once the `train.ipynb` is run and a directory `data` will be formed where all the features will be stored
 
 
 
