@@ -47,13 +47,7 @@ $$
 \nabla_{\theta} \log Z_{\theta} \simeq - \nabla_{\theta} E_{\theta} (\tilde{\mathbf{x}}),
 $$
 
-This stochastically estimates the second term in the R.H.S of the equation. But the fact still remains that a proper way is needed to get $\tilde{\mathbf{x}}$ which is a sample from the model itself. Here we use Markov chain Monte Carlo (MCMC)techniques to get the data point. More specifically a very famous algorithm used here is Langevin MCMC. The algorithm goes as follows : 
-
-$
-\mathbf{x}^{k+1} \leftarrow \mathbf{x}^k + \frac{\epsilon^2}{2} 
-\underbrace{\nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k)}_{= -\nabla_{\mathbf{x}} E_{\theta}(\mathbf{x})} 
-+ \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.
-$
+This stochastically estimates the second term in the R.H.S of the equation. But the fact still remains that a proper way is needed to get $\tilde{\mathbf{x}}$ which is a sample from the model itself. Here we use Markov chain Monte Carlo (MCMC)techniques to get the data point. More specifically a very famous algorithm used here is Langevin MCMC. The algorithm goes as follows : $\mathbf{x}^{k+1} \leftarrow \mathbf{x}^k + \frac{\epsilon^2}{2} \underbrace{\nabla_{\mathbf{x}} \log p_{\theta} (\mathbf{x}^k)}_{= -\nabla_{\mathbf{x}} E_{\theta}(\mathbf{x})} + \epsilon \mathbf{z}^k, \quad k = 0, 1, \cdots, K-1.$
 
 For small enough $ \epsilon$ and sufficiently large $K$ the algorithm indeed produces results from the original data distribution. Note that the initialization $\mathbf{x}^{0}$ is done randomly.
 MCMC not only provides a way to train the model also to infer i.e, to sample examples from it once the model is trained.
